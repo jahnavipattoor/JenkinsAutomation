@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Dev-Build') {
       steps {
-        git(branch: 'master', poll: true, url: 'https://github.com/TestLeafInc/WebAopp.git')
+        git(branch: 'master', poll: true, url: 'https://github.com/TestLeafInc/WebApp.git')
         bat 'mvn install'
         bat 'Start App.bat'
         bat 'Stop App.bat'
